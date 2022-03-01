@@ -88,7 +88,7 @@ SELECT * FROM Students;
 ```
 | Id | Firstname | Secondname | Email                       | Age | dateofbirth |
 |:--:|:----------|:--------:|:------------------------|:---:|:------------|
-|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com      |  17 | 2004-02-16  |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com      |  18 | 2004-02-26  |
 |  2 | Vimal     | raj        | vimal@gmail.com             |  19 | 2002-12-20  |
 |  3 | Prasanna  | venkatesh  | prasannavenkatesh@gmail.com |  21 | 2001-01-20  |
 ###### 3 rows in set (0.00 sec)
@@ -99,7 +99,7 @@ SELECT * FROM Students WHERE Id='1';
 ```
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth |
 |:--:|:----------|:---------|:------------------------|:---:|:------------|
-|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com |  17 | 2004-02-16  |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com |  18 | 2004-02-26  |
 ###### 1 row in set (0.00 sec)
 * * *
 ### ALTER TABLE...
