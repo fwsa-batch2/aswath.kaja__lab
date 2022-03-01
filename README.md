@@ -6,7 +6,7 @@ SHOW DATABASES;
 | Database           |
 |:-----|
 | information_schema |
-| kaushik            |
+| Aswath             |
 | mysql              |
 | performance_schema |
 | sys                |
@@ -23,7 +23,7 @@ SHOW DATABASES;
 |:-----|
 | School             |
 | information_schema |
-| kaushik            |
+| Aswath             |
 | mysql              |
 | performance_schema |
 | sys                |
@@ -68,7 +68,7 @@ DESC Students;
 ### MySQL INSERT INTO...
 ```syntax
 INSERT INTO Students (Firstname,Secondname,Email,Age,dateofbirth) VALUES
-('Aswath','kaja','Aswathkaja007@gmail.com','17','2004-02-16');
+('Aswath','kaja','Aswathkaja48@gmail.com','18','2004-02-26');
 ```
 ###### Query OK, 1 row affected (0.01 sec)
 ```syntax
@@ -88,7 +88,7 @@ SELECT * FROM Students;
 ```
 | Id | Firstname | Secondname | Email                       | Age | dateofbirth |
 |:--:|:----------|:--------:|:------------------------|:---:|:------------|
-|  1 | Aswath    | kaja       | Aswathkaja007@gmail.com     |  17 | 2004-02-16  |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com      |  17 | 2004-02-16  |
 |  2 | Vimal     | raj        | vimal@gmail.com             |  19 | 2002-12-20  |
 |  3 | Prasanna  | venkatesh  | prasannavenkatesh@gmail.com |  21 | 2001-01-20  |
 ###### 3 rows in set (0.00 sec)
@@ -99,7 +99,7 @@ SELECT * FROM Students WHERE Id='1';
 ```
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth |
 |:--:|:----------|:---------|:------------------------|:---:|:------------|
-|  1 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com |  17 | 2004-02-16  |
 ###### 1 row in set (0.00 sec)
 * * *
 ### ALTER TABLE...
@@ -131,7 +131,7 @@ SELECT * FROM Students;
 ```
 | Id | Firstname | Secondname | Email                       | Age | dateofbirth | Class |
 |:--:|:----------|:-----------|:----------------------------|:---:|:------------|:------|
-|  1 | Aswath    | kaja       | Aswathkaja007@gmail.com     |  17 | 2004-02-16  | NULL  |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com      |  18 | 2004-02-26  | NULL  |
 |  2 | Vimal     | raj        | vimal@gmail.com             |  19 | 2002-12-20  | NULL  |
 |  3 | Prasanna  | venkatesh  | prasannavenkatesh@gmail.com |  21 | 2001-01-20  | NULL  |
 ###### 3 rows in set (0.00 sec)
@@ -157,7 +157,7 @@ SELECT * FROM Students;
 ```
 | Id | Firstname | Secondname | Email                       | Age | dateofbirth | Class |
 |:--:|:----------|:-----------|:----------------------------|:---:|:------------|:------|
-|  1 | Aswath    | kaja       | Aswathkaja007@gmail.com     |  17 | 2004-02-16  | XII   |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com      |  18 | 2004-02-26  | XII   |
 |  2 | Vimal     | raj        | vimal@gmail.com             |  19 | 2002-12-20  | X     |
 |  3 | Prasanna  | venkatesh  | prasannavenkatesh@gmail.com |  21 | 2001-01-20  | XII   |
 ###### 3 rows in set (0.00 sec)
@@ -172,7 +172,7 @@ SELECT * FROM Students;
 ```
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:--:|:----------|:-----------|:------------------------|:---:|:------------|:------|
-|  1 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  1 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  17 | 2004-02-26  | XII   |
 |  2 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | X     |
 ###### 2 rows in set (0.00 sec)
 * * *
@@ -191,7 +191,7 @@ SHOW DATABASES;
 | Database           |
 |:-------------------|
 | information_schema |
-| kaushik            |
+| Aswath             |
 | mysql              |
 | performance_schema |
 | sys                |
@@ -235,7 +235,7 @@ SELECT * FROM students;
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### FOREIGN KEY
 ```syntax
@@ -272,7 +272,7 @@ SELECT * FROM students;
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:--:|:----------|:---------|:------------------------|:---:|:------------|:--------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### AND
 ```syntax
@@ -289,7 +289,7 @@ SELECT * FROM students WHERE NOT Age = 21;
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### BETWEEN
 ```syntax
@@ -298,7 +298,7 @@ SELECT * FROM students WHERE Age BETWEEN 10 AND 22;
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### IN
 ```syntax
@@ -307,7 +307,7 @@ mysql> SELECT * FROM students WHERE Class IN ('XII');
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### LIKE
 ```syntax
@@ -315,7 +315,7 @@ mysql> SELECT * FROM students WHERE Firstname LIKE 'As%';
 ```
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 1 row in set (0.00 sec)
 ### ANY
 ```syntax
@@ -362,7 +362,7 @@ SELECT * FROM students;
 | Id | Firstname | Secondname | Email                   | Age | dateofbirth | Class |
 |:---|:----------|:-----------|:------------------------|:----|:------------|:------|
 |  1 | Vimal     | raj        | vimal@gmail.com         |  19 | 2002-12-20  | XII   |
-|  2 | Aswath    | kaja       | Aswathkaja007@gmail.com |  17 | 2004-02-16  | XII   |
+|  2 | Aswath    | kaja       | Aswathkaja48@gmail.com  |  18 | 2004-02-26  | XII   |
 ###### 2 rows in set (0.00 sec)
 ### MIN
 ```syntax
@@ -370,7 +370,7 @@ mysql> SELECT MIN(age) FROM students;
 ```
 | MIN(age) |
 |:---------|
-|       17 |
+|       18 |
 ###### 1 row in set (0.00 sec)
 ### MAX
 ```syntax
