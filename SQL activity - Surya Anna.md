@@ -42,16 +42,16 @@ DESC Batch;
 | name     | varchar  | NO   | MUL |         |                |
 
 
-### TASK 3 : Take username,student_id and batch value
+## TASK 3 : Take username,student_id and batch value
 
 ```syntax
-SELECT user.id,user.name AS username,batch.name AS batch FROM batch_user JOIN user ON batch_user.user_id = user.id JOIN batch ON batch_user.batch_id = batch.id;
-```
+ select user.id user_id,user.name name ,Batch.id batch_id,Batch.name batch_name,courses.id course_id,courses.name course_name from user join Batch on user.id= Batch.id join courses on user.id = courses.id;
+ ```
 
-| id | username | name   |
-|:---|:---------|:-------|
-|  2 | Dhaya    | Batch1 |
-|  2 | Dhaya    | Batch1 |
+| id | username | batch_id | batch_name | course_id | course_name |
+|:---|:---------|:---------|:-----------|:----------|:------------|
+|  1 | Aswath   | 1        | Batch1     |  1        | HTML        |
+|  2 | Haiden   | 2        | Batch2     |  2        | CSS         |
 
 ### TASK 4 : Take user id, username,batch id, batch name, courses id,courses name for who learn HTML only
 
