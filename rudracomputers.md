@@ -27,11 +27,11 @@ CREATE TABLE products(product_id INT PRIMARY KEY, brand_id int , product_name VA
 
   ``` mysql
   CREATE TABLE reviews (customer_id int , review_id int PRIMARY KEY, ratings int(5) check (ratings <= 5) , comments varchar(50) ,posted_date timestamp not null default current_timestamp, FOREIGN KEY (customer_id) REFERENCES customer_details (customer_id) );
-    ``` 
+``` 
 
   ``` mysql
  CREATE TABLE services (customer_id int ,service_id int PRIMARY KEY , problem_note varchar(100),service_status varchar(100),posted_date timestamp not null default current_timestamp  FOREIGN KEY (customer_id) REFERENCES customer_details (customer_id));
-  ``` 
+ ``` 
 
  ``` mysql 
  CREATE TABLE stocks(id int primary key, brand_id int , total_stocks int , available_stocks int , no_of_stocks_sold int , availability enum('in stock','out of stock'),foreign key (brand_id) references brands (brand_id));   
