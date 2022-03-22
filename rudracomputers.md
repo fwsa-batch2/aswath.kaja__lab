@@ -23,6 +23,17 @@ DESC rudracomputers;
 | address               | varchar(50) | YES  |     | NULL    |                |
 | customer_phone_number | bigint      | NO   | UNI | NULL    |                |
 
+```mysql
+ DESC products;
+      ```
+| Field            | Type         | Null | Key | Default | Extra |
+|:-----------------|:-------------|:-----|:----|:--------|:------|
+| product_id       | int          | NO   | PRI | NULL    |       |
+| brand_id         | int          | YES  | MUL | NULL    |       |
+| product_name     | varchar(100) | NO   |     | NULL    |       |
+| product_category | varchar(100) | YES  |     | NULL    |       |
+| product_price    | bigint       | YES  |     | NULL    |       |
+
   ``` mysql
 CREATE TABLE brands (brand_id int PRIMARY KEY,brand_name varchar(50));
  ``` 
