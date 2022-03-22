@@ -167,24 +167,12 @@ CREATE TABLE employees (emp_id varchar(10) PRIMARY KEY , emp_name varchar(100) N
 |           2 | sathyavaan | soosayappan | sathya02 | sathya@gmail.com | 12345678 | xyz street |            9080641775 |
 |           3 | dadabhai   | naroji      | dada03   | dada03@gmail.com | 12345678 | xyz street |            9080641776 |
 
- ```mysql
-  select * from products;
-  ```
-| product_id | brand_id | product_name        | product_category | product_price |
-|:-----------|:---------|:--------------------|:-----------------|:--------------|
-|          1 |        1 | lenovo ideapad slim | laptop           |         40000 |
-|          2 |        2 | dell vestro 3400    | laptop           |         50000 |
-|          3 |        3 | HP 15 db1069AU      | laptop           |         50000 |
-|          4 |        4 | Apple macbook air   | laptop           |        100000 |
+### INSERT INTO BRANDS
 
-```mysql
- select * from cart;
- ```
-| order_id | customer_id | product_id | Quantity | total_cost | status           | ordered_date        | delivered_date      |
-|:---------|:------------|:-----------|:---------|:-----------|:-----------------|:--------------------|:--------------------|
-|        1 |           1 |          1 |        1 |      40000 | delivered        | 2022-03-17 15:13:30 | 2022-03-19 12:30:00 |
-|        2 |           2 |          3 |        1 |      50000 | out for delivery | 2022-03-19 19:13:20 | NULL                |
-|        3 |           3 |          2 |        1 |      50000 | delivered        | 2022-03-20 19:12:55 | 2022-03-19 10:15:00 |
+``` mysql
+insert into brands values (1,'dell'),(2,'lenovo'),(3,'hp'),(4,'apple');
+``` 
+
 ```mysql
 SELECT * FROM brands;
 ```
@@ -194,57 +182,99 @@ SELECT * FROM brands;
 |        2 | lenovo     |     4.5 |
 |        3 | hp         |     4.3 |
 |        4 | apple      |     4.9 |
-```mysql
- SELECT * FROM stocks;
-```
-| id | brand_id | total_stocks | available_stocks | no_of_stocks_sold | availability |
-+----+----------+--------------+------------------+-------------------+--------------+
-|  1 |        1 |           10 |                9 |                 1 | in stock     |
-
-```mysql
- SELECT * FROM reviews;
-```
-
-```mysql
-SELECT * FROM services;
-```
-```mysql
- SELECT * FROM employees;
- ```
-
-```mysql
- SELECT * FROM payment;
-```
-
-### INSERT INTO BRANDS
-
- ``` mysql
-insert into brands values (1,'dell'),(2,'lenovo'),(3,'hp'),(4,'apple');
- ``` 
 
 ### INSERT INTO PRODUCTS
 
- ``` mysql
+``` mysql
 insert into products values(1,1,'lenovo ideapad slim','laptop', 40000),(2,2,'dell vestro 3400','laptop', 50000),(3,3,'HP 15 db1069AU','laptop', 50000),(4,4,'Apple macbook air','laptop', 100000);
- ``` 
+``` 
+
+```mysql
+select * from products;
+```
+
+| product_id | brand_id | product_name        | product_category | product_price |
+|:-----------|:---------|:--------------------|:-----------------|:--------------|
+|          1 |        1 | lenovo ideapad slim | laptop           |         40000 |
+|          2 |        2 | dell vestro 3400    | laptop           |         50000 |
+|          3 |        3 | HP 15 db1069AU      | laptop           |         50000 |
+|          4 |        4 | Apple macbook air   | laptop           |        100000 |
 
 ### INSERT INTO CART
- ``` mysql
+```mysql
 insert into cart (order_id,customer_id,product_id,Quantity,total_cost,status) values(1, 1 , 1 , 1 , 40000 , 'out for delivery'),(2, 2 , 3 , 1 , 50000 , 'delivered'),(3, 3 , 2 , 1 , 50000 , 'delivered');
- ``` 
+``` 
+```mysql
+select * from cart;
+```
+| order_id | customer_id | product_id | Quantity | total_cost | status           | ordered_date        | delivered_date      |
+|:---------|:------------|:-----------|:---------|:-----------|:-----------------|:--------------------|:--------------------|
+|        1 |           1 |          1 |        1 |      40000 | delivered        | 2022-03-17 15:13:30 | 2022-03-19 12:30:00 |
+|        2 |           2 |          3 |        1 |      50000 | out for delivery | 2022-03-19 19:13:20 | NULL                |
+|        3 |           3 |          2 |        1 |      50000 | delivered        | 2022-03-20 19:12:55 | 2022-03-19 10:15:00 |
+
+
 ### INSERT INTO PAYMENT
- ``` mysql
+``` mysql
 insert into payment values(1 , 40000 , 1 , cash on delivery ,'recieved'),(2, 50000 ,2,'online payment' ,'not recived'),(3, 50000 ,3,'online payment' ,'not recived');
  ``` 
- 
- ### CREATING A VIEW TO SEE THE ORDER PROGRESS OF CUSTOMERS
-  ```mysql                                                                                                         
- create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status from cart ct inner join payment py on ct.order_id = py.order_id;
+
+```mysql
+SELECT * FROM payment;
 ```
+
+| order_id | amount | payment_id | payment_type     | payment_status |
+|:---------|:-------|:-----------|:-----------------|:---------------|
+|        1 |  40000 |          1 | cash on delivery | recieved       |
+|        2 |  50000 |          2 | online payment   | not recieved   |
+|        3 |  50000 |          3 | online payment   | not recieved   |
+
+### INSERT VALUES INTO STOCKS
+```mysql
+SELECT * FROM stocks;
+```
+| id | brand_id | total_stocks | available_stocks | no_of_stocks_sold | availability |
+|:---|:---------|:-------------|:-----------------|:------------------|:-------------|
+|  1 |        1 |           10 |                9 |                 1 | in stock     |
+
+### INSERT VALUES INTO REVIEWS
+```mysql
+SELECT * FROM reviews;
+```
+| customer_id | review_id | ratings | comments | posted_date         |
+|:------------|:----------|:--------|:---------|:--------------------|
+|           1 |         1 |       4 | nice app | 2022-03-19 12:54:43 |
+
+### INSERT VALUES INTO SERVICES
+```mysql
+SELECT * FROM services;
+```
+| customer_id | service_id | problem_note  | service_status      | posted_date         | handled_by |
+|:------------|:-----------|:--------------|:--------------------|:--------------------|:-----------|
+|           1 |          1 | restart issue | process not started | 2022-03-19 20:31:44 | E002       |
+
+### INSERT VALUES INTO EMPLOYEES
+```mysql
+SELECT * FROM employees;
+ ```
+
+| emp_id | emp_name    | role              | experience | joined_date |
+|:-------|:------------|:------------------|:-----------|:------------|
+| E001   | Aswath      | admin             |         15 | 2010-01-01  |
+| E002   | Abdul ajees | hardware engineer |          5 | 2012-10-12  |
+| E003   | sanjay      | hardware engineer |          5 | 2012-10-12  |
+| E004   | musaraf     | software engineer |          2 | 2014-10-20  |
+
+ 
+### CREATING A VIEW TO SEE THE ORDER PROGRESS OF CUSTOMERS
+```mysql                                                                                                         
+create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status from cart ct inner join payment py on ct.order_id = py.order_id;
+```
+
 
  ### CREATING A VIEW TO SEE THE PROGRESS OF CUSTOMERS
 ```mysql   
- create view customer_progress select cus.customer_id , ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status,sv.service_id,sv.problem_note,sv.service_status,sv.posted_date from customer_details cus left join cart ct on cus.customer_id =ct.customer_id  left join payment py on ct.order_id = py.order_id left join services sv on ct.customer_id = sv.customer_id;
+create view customer_progress select cus.customer_id , ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status,sv.service_id,sv.problem_note,sv.service_status,sv.posted_date from customer_details cus left join cart ct on cus.customer_id =ct.customer_id  left join payment py on ct.order_id = py.order_id left join services sv on ct.customer_id = sv.customer_id;
  ```
 
 
