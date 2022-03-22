@@ -10,7 +10,7 @@ USE Rudracomputers;
  ```
 ```mysql
 DESC rudracomputers;
-    ```
+ ```
 
 | Field                 | Type        | Null | Key | Default | Extra          |
 |:----------------------|:------------|:-----|:----|:--------|:---------------|
