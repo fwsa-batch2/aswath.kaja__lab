@@ -13,7 +13,7 @@ DESC rudracomputers;
     ```
 
 | Field                 | Type        | Null | Key | Default | Extra          |
-|-----------------------|-------------|------|-----|---------|----------------|
+|:----------------------|:------------|:-----|:----|:--------|:---------------|
 | customer_id           | int         | NO   | PRI | NULL    | auto_increment |
 | first_name            | varchar(20) | NO   |     | NULL    |                |
 | last_name             | varchar(20) | YES  |     | NULL    |                |
