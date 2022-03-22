@@ -26,6 +26,8 @@ DESC customer_details;
 ```mysql
  DESC products;
       ```
+      
+
 | Field            | Type         | Null | Key | Default | Extra |
 |:-----------------|:-------------|:-----|:----|:--------|:------|
 | product_id       | int          | NO   | PRI | NULL    |       |
@@ -34,8 +36,10 @@ DESC customer_details;
 | product_category | varchar(100) | YES  |     | NULL    |       |
 | product_price    | bigint       | YES  |     | NULL    |       |
 
-  ``` mysql
-CREATE TABLE brands (brand_id int PRIMARY KEY,brand_name varchar(50));
+
+
+  ```mysql
+ CREATE TABLE brands (brand_id int PRIMARY KEY,brand_name varchar(50));
  ``` 
 
   ``` mysql
