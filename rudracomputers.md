@@ -9,8 +9,8 @@ CREATE DATABASE RudraComputers;
 USE Rudracomputers;
  ```
 ```mysql
-DESC rudracomputers;
-    ```
+DESC customer_details;
+ ```
 
 | Field                 | Type        | Null | Key | Default | Extra          |
 |:----------------------|:------------|:-----|:----|:--------|:---------------|
