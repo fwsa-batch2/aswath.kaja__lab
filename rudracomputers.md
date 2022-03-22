@@ -8,6 +8,20 @@ CREATE DATABASE RudraComputers;
 ``` mysql
 USE Rudracomputers;
  ```
+```mysql
+DESC rudracomputers;
+   ```
+
+| Field                 | Type        | Null | Key | Default | Extra          |
+|-----------------------|-------------|------|-----|---------|----------------|
+| customer_id           | int         | NO   | PRI | NULL    | auto_increment |
+| first_name            | varchar(20) | NO   |     | NULL    |                |
+| last_name             | varchar(20) | YES  |     | NULL    |                |
+| username              | varchar(50) | NO   |     | NULL    |                |
+| customer_email        | varchar(30) | NO   | UNI | NULL    |                |
+| password              | varchar(15) | YES  |     | NULL    |                |
+| address               | varchar(50) | YES  |     | NULL    |                |
+| customer_phone_number | bigint      | NO   | UNI | NULL    |                |
 
   ``` mysql
 CREATE TABLE brands (brand_id int PRIMARY KEY,brand_name varchar(50));
