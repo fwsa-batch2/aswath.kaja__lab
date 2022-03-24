@@ -276,7 +276,12 @@ create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,
 ```mysql   
 create view customer_progress select cus.customer_id , ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status,sv.service_id,sv.problem_note,sv.service_status,sv.posted_date from customer_details cus left join cart ct on cus.customer_id =ct.customer_id  left join payment py on ct.order_id = py.order_id left join services sv on ct.customer_id = sv.customer_id;
  ```
+ ### ER DIAGRAM
+![Drawing (1)](https://user-images.githubusercontent.com/93571042/159883178-8ed512c7-26b3-434d-9f39-7866564245b1.png)
 
+
+### EER DIAGRAM
+![rcomp eer diagram](https://user-images.githubusercontent.com/93571042/159882838-027f7d64-83db-4a8f-a086-a62299e300f9.png)
 
 
 
