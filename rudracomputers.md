@@ -273,9 +273,12 @@ create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,
 
 
  ### CREATING A VIEW TO SEE THE PROGRESS OF CUSTOMERS
+ 
 ```mysql   
 create view customer_progress select cus.customer_id , ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status,sv.service_id,sv.problem_note,sv.service_status,sv.posted_date from customer_details cus left join cart ct on cus.customer_id =ct.customer_id  left join payment py on ct.order_id = py.order_id left join services sv on ct.customer_id = sv.customer_id;
  ```
+
+
 
 
 
