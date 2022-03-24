@@ -1,8 +1,19 @@
-### CREATE TABLE...
+## CREATE TABLE...
 ```mysql
 CREATE TABLE Students(Id int primary key auto_increment, Firstname varchar(255) NOT NULL, Secondname varchar(255) NOT NULL,Email varchar(255) UNIQUE NOT
  NULL, Age int(2) NOT NULL, dateofbirth date NOT NULL);
 ```
+## ALTER TABLE...
+```syntax
+ ALTER TABLE Students ADD Class varchar(70);
+```
+###### Query OK, 0 rows affected (0.02 sec)
+###### Records: 0  Duplicates: 0  Warnings: 0
+```syntax
+mysql> ALTER TABLE Students MODIFY COLUMN Class char(100);
+```
+###### Query OK, 3 rows affected (0.05 sec)
+###### Records: 3  Duplicates: 0  Warnings: 0
 
 ```mysql
 DESC students;
@@ -28,7 +39,7 @@ SELECT * FROM Students;
 ###### 3 rows in set (0.00 sec)
 * * *
 
-### DROP TABLE...
+## DROP TABLE...
 ```mysql
 DROP TABLE Students;
 ```
@@ -38,10 +49,15 @@ DROP DATABASE School;
 ```
 ###### Query OK, 0 rows affected (0.02 sec)
 
-### TRUNCATE TABLE
+## TRUNCATE TABLE
 ```mysql
 TRUNCATE TABLE  table_name;
 ```
 ##### Query OK, 0 rows affected 
 
-### 
+### RENAME
+ ```syntax
+  RENAME TABLE school to student_list;
+ ```
+
+
