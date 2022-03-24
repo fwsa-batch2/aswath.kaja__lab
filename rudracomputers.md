@@ -278,7 +278,7 @@ create view customer_progress select cus.customer_id , ct.customer_id , ct.order
  ```
 
 
-![WIN_20220310_14_56_23_Pro](https://user-images.githubusercontent.com/93571042/159880846-9392daba-ef3e-4b8f-a1f1-04c2a29b649a.jpg)
+
 
 
 
