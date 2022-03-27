@@ -233,7 +233,7 @@ SELECT * FROM payment;
 ```mysql
 SELECT * FROM stocks;
 ```
-| id | brand_id | total_stocks | available_stocks | no_of_stocks_sold | availability |
+| id | product_id | total_stocks | available_stocks | no_of_stocks_sold | availability |
 |:---|:---------|:-------------|:-----------------|:------------------|:-------------|
 |  1 |        1 |           10 |                9 |                 1 | in stock     |
 
@@ -267,7 +267,7 @@ SELECT * FROM employees;
 
  
 ### CREATING A VIEW TO SEE THE ORDER PROGRESS OF CUSTOMERS
-```mysql                                                                                                         
+```mysql
 create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status from cart ct inner join payment py on ct.order_id = py.order_id;
 ```
 
@@ -277,6 +277,11 @@ create view order_progress as select ct.customer_id , ct.order_id,ct.product_id,
 ```mysql   
 create view customer_progress select cus.customer_id , ct.customer_id , ct.order_id,ct.product_id,ct.status,ct.delivered_date,py.payment_id,py.payment_type,py.payment_status,sv.service_id,sv.problem_note,sv.service_status,sv.posted_date from customer_details cus left join cart ct on cus.customer_id =ct.customer_id  left join payment py on ct.order_id = py.order_id left join services sv on ct.customer_id = sv.customer_id;
  ```
+
+```mysql
+create view stocks_list as select products.product_id,products.product_name,stocks.stock_id,stocks.total_stocks,stocks.available_stocks,stocks.no_of_stocks_sold,stocks.availability from products inner join stocks on products.product_id = stocks.stock_id;
+```
+
  ## ER DIAGRAM
 ![Drawing (1)](https://user-images.githubusercontent.com/93571042/159883178-8ed512c7-26b3-434d-9f39-7866564245b1.png)
 
