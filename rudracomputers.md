@@ -283,8 +283,7 @@ create view stocks_list as select products.product_id,products.product_name,stoc
 ```
 
  ## ER DIAGRAM
-![Drawing (1)](https://user-images.githubusercontent.com/93571042/159883178-8ed512c7-26b3-434d-9f39-7866564245b1.png)
-
+![Drawing (2)](https://user-images.githubusercontent.com/93571042/160091330-549dc3a7-4b2f-4c55-bdc0-396d8504a919.png)
 
 ## EER DIAGRAM
 ![rcomp eer diagram](https://user-images.githubusercontent.com/93571042/159882838-027f7d64-83db-4a8f-a086-a62299e300f9.png)
