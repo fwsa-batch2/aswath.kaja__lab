@@ -281,6 +281,12 @@ create view customer_progress select cus.customer_id , ct.customer_id , ct.order
 ```mysql
 create view stocks_list as select products.product_id,products.product_name,stocks.stock_id,stocks.total_stocks,stocks.available_stocks,stocks.no_of_stocks_sold,stocks.availability from products inner join stocks on products.product_id = stocks.stock_id;
 ```
+| product_id | product_name        | stock_id | total_stocks | available_stocks | no_of_stocks_sold | availability |
+|:-----------|:--------------------|:---------|:-------------|:-----------------|:------------------|:-------------|
+|          1 | lenovo ideapad slim |        1 |           10 |                9 |                 1 | in stock     |
+|          2 | dell vestro 3400    |        2 |           20 |               19 |                 1 | in stock     |
+|          3 | HP 15 db1069AU      |        3 |           15 |               14 |                 1 | in stock     |
+|          4 | Apple macbook air   |        4 |           35 |               34 |                 1 | in stock     |
 
  ## ER DIAGRAM
 ![Drawing (2)](https://user-images.githubusercontent.com/93571042/160091330-549dc3a7-4b2f-4c55-bdc0-396d8504a919.png)
