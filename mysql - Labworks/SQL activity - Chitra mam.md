@@ -1,29 +1,29 @@
- ## QuestION 1:-
+ ## QUESTION 1:-
 
  ```mysql
 insert into students (id,name,email,mobile_no,password,gender,dob) values (NULL,'Annamalai' ,'annamalai@gmail.com' , 7695883749 , '1234' ,'M',' 2003-08-19'),(NULL,'Haiden' ,'haiden@gmail.com' , 9043494315, '1234' ,'M''2002-01-31'),(NULL,'jerusheya' ,'jerusheya@gmail.com' , 7695883749 , '1234' ,'F','2002-08-26'),(NULL,'Abisha' ,'abisha@gmail.com' , 6379481526 , '1234' ,'F',' 2003-06-03'), (NULL,'Swetha' ,'swetha@gmail.com' , 9025336748 , '1234' ,'F',' 2004-11-16'),(NULL,'Selva' ,'selva@gmail.com' , 6374336552 , '1234' ,'M',' 2000-11-13');
 ```
 
-## QuestION 2 :-
+## QUESTION 2 :-
 ```mysql       
 select * from students;
 ```
 
-## QuestION 3:-
+## QUESTION 3:-
 ```mysql
 select * from students natural join student_class where email ="kingaswath46@gmail.com" and password="1234";
  ```
 
-## QuestION 4:-
+## QUESTION 4:-
 ```mysql
 update students set password = 'as1234' where id = '1';
 ```
 
-## QuestION 5:-
+## QUESTION 5:-
 ```mysql
  INSERT INTO student_class (id,Student_id,Class,status) VALUES (1,1,1,'ACTIVE'),(2,2,1,'ACTIVE'),(3,3,2,'ACTIVE'),(4,4,5,'ACTIVE'),(5,5,5,'INACTIVE'),(6,6,5,'INACTIVE'),(7,7,5,'INACTIVE');
 ```
-## QuestION 6:-
+## QUESTION 6:-
 ```mysql
 select * from students natural join student_class;
 ```
@@ -57,7 +57,7 @@ select * from students where dob is NULL;
 |  6 | Abisha | abisha@gmail.com | 6379481526 | 1234     | F      | 2003-06-03 | 2022-03-01 22:26:01 |          6 |     6 | INACTIVE |
 2 rows in set (0.00 sec)
 
-## FEARURE 11
+## QUESTION 11
 ```mysql  
 Select count(status) from student_class where status = 'ACTIVE';
 ```
