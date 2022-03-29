@@ -93,11 +93,12 @@ select * from students where dob is NULL;
 |:---|:-------|:-----------------|:-----------|:---------|:-------|:-----------|:--------------------|:-----------|:------|:---------|
 |  4 | Haiden | haiden@gmail.com | 9043494315 | 1234     | M      | 2002-01-31 | 2022-03-01 22:22:57 |          4 |     6 | INACTIVE |
 |  6 | Abisha | abisha@gmail.com | 6379481526 | 1234     | F      | 2003-06-03 | 2022-03-01 22:26:01 |          6 |     6 | INACTIVE |
-```
+
 2 rows in set (0.00 sec)
 
 ## Feature 11:
 ### Find Total no of students actively studying in each class:
+
 ```mysql  
 Select count(status) from student_class where status = 'ACTIVE';
 ```
