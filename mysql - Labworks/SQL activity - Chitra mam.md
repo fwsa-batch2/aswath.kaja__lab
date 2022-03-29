@@ -85,7 +85,8 @@ select * from students where dob is NULL;
 |  7 | Swetha | swetha@gmail.com | 9025336748 | 1234     | F      | NULL | 2022-03-01 22:27:46 |
 
 ## Feature 10:
-### Find Total no of students actively studying in this school```mysql
+### Find Total no of students actively studying in this school
+```mysql
  select * from students NATURAL JOIN student_class where status = 'INACTIVE';
  ```
 | id | name   | email            | mobile_no  | password | gender | dob        | created_date        | student_id | class | status   |
