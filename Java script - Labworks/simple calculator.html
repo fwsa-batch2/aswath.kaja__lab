@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #f2f2f2;
+            }
+            .form{
+                box-shadow: 0px 0px 20px 1px #ccc;
+                max-width: 500px;
+                margin: auto;
+                margin-top: 7%;
+                padding: 20px;
+            }
+
+            button {
+                background-color: yellow;
+                font-size:xx-large;
+                width: 23%;
+                padding: 12px 0px;
+            }
+            
+            input {
+                   background-color: aqua;
+                   width: 100%;
+                   padding: 3%;
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="form">
+        <h1>SIMPLE CALCULATOR</h1>
+
+            <label for="">Number 1</label>
+            <input  id="no1"  type="number"><br><br>  
+            <label for="">Number 2</label>
+            <input  id="no2"  type="number"><br><br>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button><br><br>
+
+            <label for="">Result =</label>
+            <input  id="answer" type="number" value="answer">
+       
+    
+    <script>
+       function add(){
+           let a=parseInt(document.getElementById("no1").value);
+           let b=parseInt(document.getElementById("no2").value);
+           document.getElementById("answer").value=a+b;
+       }
+       function sub(){
+           let a=parseInt(document.getElementById("no1").value);
+           let b=parseInt(document.getElementById("no2").value);
+           document.getElementById("answer").value=a-b;
+       }
+       function mul(){
+           let a=parseInt(document.getElementById("no1").value);
+           let b=parseInt(document.getElementById("no2").value);
+           document.getElementById("answer").value=a*b;
+       }
+       function div(){
+           let a=parseInt(document.getElementById("no1").value);
+           let b=parseInt(document.getElementById("no2").value);
+           document.getElementById("answer").value=a/b;
+       }     
+    </script>
+    </div>
+    </body>
+    </html>
