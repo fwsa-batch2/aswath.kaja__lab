@@ -1,10 +1,5 @@
 public class start{
     public static void main(String[] args) {
-
- //arithemtic operators
- 
-
-
-
+    System.out.print("LETS START JAVA");  //BASIC PRINTING PROGRAM
     }
 }
