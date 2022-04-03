@@ -6,10 +6,10 @@ public class variables {
     char gender = 'M';
     float height = 18.8f;
     boolean is_married  = false;
-    System.out.println("Name :" + name );
-    System.out.println("Age :" + age );
+    System.out.println("Name   :" + name );
+    System.out.println("Age    :" + age );
     System.out.println("Gender :" + gender );
     System.out.println("Height :" + height);
-    System.out.println("Marrital status:" + is_married );
+    System.out.println("Married:" + is_married );
     }
 }
