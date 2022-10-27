@@ -7,8 +7,7 @@ class NEW_CLASS
  def get_name
    @instance_var
  end
-
-  def set_class_name(new_name)
+def set_class_name(new_name)
       @@class_var = new_name
   end
 

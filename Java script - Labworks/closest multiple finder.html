@@ -9,9 +9,9 @@
 <body>
   <script>
 
-let numbers = [6,11,15];
-let multiple = 9
-let newArr = numbers.map(myFunction);
+let numbers = [8,11,15];
+let multiple = 3
+let result = numbers.map(myFunction);
 function myFunction(n){
 // method 1
 
@@ -36,14 +36,13 @@ function myFunction(n){
 // method 2
 
 let answer = Math.round(n/multiple) * multiple ;
-console.log(answer)
     if (answer <= 0)
     return multiple
     else
     return answer
 }
 
-console.log("Multiple of Three", newArr);
+console.log("Closest Multiple of" +{multiple} + "is", result);
 
   </script>
 </body>
